@@ -54,4 +54,8 @@ public class UserEntity {
   public LocalDate getCreatedAt() {
     return createdAt;
   }
+
+  public LocalDate getUpdatedAt() {
+    return updatedAt;
+  }
 }

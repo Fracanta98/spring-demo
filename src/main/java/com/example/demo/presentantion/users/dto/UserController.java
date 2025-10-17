@@ -1,10 +1,7 @@
-package com.example.demo.presentantion;
+package com.example.demo.presentantion.users.dto;
 
 import com.example.demo.data.entities.UserEntity;
 import com.example.demo.domain.UserService;
-import com.example.demo.presentantion.dto.UserRequest;
-import com.example.demo.presentantion.dto.UserResponse;
-import com.example.demo.presentantion.dto.UsersResponse;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
