@@ -15,7 +15,7 @@ public class OrderEntity {
   @JoinColumn(name = "user_id", nullable = false)
   private UserEntity userId;
 
-  @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+  @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
   @JoinTable(
     name = "orders__products",
     joinColumns = @JoinColumn(name = "order_id"),
@@ -26,10 +26,4 @@ public class OrderEntity {
   @Column(nullable = false)
   private float totalPrice;
 
-  @Column(length = 10)
-  private String coupon;
-
-  public List<ProductEntity> getProducts() {
-    return products;
-  }
 }
